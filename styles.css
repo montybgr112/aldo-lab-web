@@ -1,0 +1,365 @@
+:root {
+    --navy-dark: #0b2239;
+    --navy-medium: #15385b;
+    --orange-accent: #f37021;
+    --orange-hover: #d85d12;
+    --bg-light: #f4f6f9;
+    --white: #ffffff;
+    --text-dark: #1e293b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+    line-height: 1.5;
+}
+
+/* --- HEADER Y HERO --- */
+.hero-wrapper {
+    background: linear-gradient(105deg, rgba(11, 34, 57, 0.92) 35%, rgba(11, 34, 57, 0.45) 100%),
+                url('image/taller.png') center/cover no-repeat;
+    color: var(--white);
+    padding-bottom: 5rem;
+    position: relative;
+}
+
+header {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.brand {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.brand-title span {
+    color: var(--orange-accent);
+}
+
+.brand-subtitle {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: #e2e8f0;
+    margin-top: 3px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.2s;
+    padding-bottom: 4px;
+}
+
+nav a.active,
+nav a:hover:not(.btn-nav) {
+    color: var(--orange-accent);
+    border-bottom: 2px solid var(--orange-accent);
+}
+
+.btn-nav {
+    background-color: var(--orange-accent);
+    color: var(--white);
+    padding: 0.65rem 1.4rem;
+    border-radius: 6px;
+    font-weight: 700;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn-nav:hover {
+    background-color: var(--orange-hover);
+    transform: translateY(-2px);
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 3.5rem auto 1rem;
+    padding: 0 2rem;
+}
+
+.hero-tag {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #cbd5e1;
+    margin-bottom: 0.5rem;
+}
+
+.hero-content h1 {
+    font-size: clamp(2.2rem, 5vw, 3.6rem);
+    font-weight: 700;
+    line-height: 1.15;
+    max-width: 650px;
+    margin-bottom: 2rem;
+}
+
+.btn-cta {
+    display: inline-block;
+    background-color: var(--orange-accent);
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.15rem;
+    font-weight: 700;
+    padding: 0.9rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 14px rgba(243, 112, 33, 0.4);
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn-cta:hover {
+    background-color: var(--orange-hover);
+    transform: translateY(-2px);
+}
+
+.divider-bar {
+    height: 18px;
+    background: linear-gradient(90deg, #334155, #64748b);
+    width: 100%;
+}
+
+/* --- SECCIÓN SERVICIOS --- */
+.services-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 4.5rem 2rem;
+    text-align: center;
+}
+
+.services-section h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.3rem;
+    color: var(--navy-dark);
+    margin-bottom: 2.8rem;
+    letter-spacing: 0.5px;
+}
+
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.8rem;
+}
+
+.service-card {
+    background-color: var(--white);
+    border-radius: 14px;
+    padding: 2.2rem 1.5rem;
+    width: 245px;
+    box-shadow: 0 8px 24px rgba(11, 34, 57, 0.07);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 4px solid transparent;
+    cursor: pointer;
+    outline: none;
+}
+
+.service-card:hover,
+.service-card:focus {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(11, 34, 57, 0.16);
+    border-bottom-color: var(--orange-accent);
+}
+
+.service-icon {
+    font-size: 2.8rem;
+    margin-bottom: 1.2rem;
+    color: var(--navy-dark);
+    position: relative;
+    transition: transform 0.25s ease;
+}
+
+.service-card:hover .service-icon,
+.service-card:focus .service-icon {
+    transform: scale(1.08);
+}
+
+.service-icon .accent {
+    color: var(--orange-accent);
+}
+
+.service-card h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--navy-dark);
+    line-height: 1.35;
+}
+
+/* --- NOTA DESPLEGABLE --- */
+.service-note {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, opacity 0.3s ease, margin-top 0.3s ease, padding-top 0.3s ease;
+    font-size: 0.88rem;
+    color: #475569;
+    line-height: 1.45;
+    border-top: 1px solid transparent;
+}
+
+.service-card:hover .service-note,
+.service-card:focus .service-note {
+    max-height: 180px;
+    opacity: 1;
+    margin-top: 1rem;
+    padding-top: 0.9rem;
+    border-top-color: #e2e8f0;
+}
+
+/* --- FOOTER Y CONTACTO --- */
+footer {
+    background-color: var(--navy-dark);
+    color: var(--white);
+    padding: 3.5rem 2rem;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    color: var(--white);
+    transition: opacity 0.2s;
+}
+
+.contact-item:hover {
+    opacity: 0.85;
+}
+
+a.contact-item:hover .address-text {
+    text-decoration: underline;
+    color: var(--white);
+}
+
+.icon-circle {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.whatsapp-bg {
+    background-color: #25D366;
+    color: var(--white);
+}
+
+.location-bg {
+    background-color: var(--orange-accent);
+    color: var(--white);
+}
+
+.phone-text {
+    font-size: 1.65rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.address-text {
+    font-size: 1.1rem;
+    color: #e2e8f0;
+}
+
+.map-box {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    border: 3px solid var(--navy-medium);
+    height: 220px;
+}
+
+.map-box iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.85rem;
+    color: #94a3b8;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        gap: 1.2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-content {
+        margin-top: 2rem;
+        text-align: center;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        width: 100%;
+        max-width: 320px;
+    }
+}
